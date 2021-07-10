@@ -49,19 +49,34 @@ class MyApp extends StatelessWidget {
                       fontSize: 25,
                     )),
                 Container(
-                  decoration: BoxDecoration(
-                    // ADICIONANDO IMAGEM VIA URL
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(10), // ADICIONAR BORDA NO CONTAINER
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          "https://images.pexels.com/photos/1599005/pexels-photo-1599005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
-                      fit: BoxFit
-                          .cover, // PREENCHER A IMAGEM NO CONTAINER INTEIRO
+                    decoration: BoxDecoration(
+                      // ADICIONANDO IMAGEM VIA URL
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(
+                          10), // ADICIONAR BORDA NO CONTAINER
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            "https://images.pexels.com/photos/1599005/pexels-photo-1599005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+                        fit: BoxFit
+                            .cover, // PREENCHER A IMAGEM NO CONTAINER INTEIRO
+                      ),
                     ),
-                  ),
-                  height: 150,
-                )
+                    height: 150,
+                    width: double.infinity,
+                    child: Container(
+                      margin: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Super Flash Sale",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 25)),
+                          Text("50% off",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 25))
+                        ],
+                      ),
+                    ))
               ],
             ),
           )),
