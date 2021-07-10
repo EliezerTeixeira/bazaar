@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
               )
             ],
           ),
-          body: Container( // ADICIONAR MARGIN NA COLUMN
+          body: Container(
+            // ADICIONAR MARGIN NA COLUMN
             margin: EdgeInsets.all(10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment
@@ -48,7 +49,17 @@ class MyApp extends StatelessWidget {
                       fontSize: 25,
                     )),
                 Container(
-                  color: Colors.black,
+                  decoration: BoxDecoration(
+                    // ADICIONANDO IMAGEM VIA URL
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(10), // ADICIONAR BORDA NO CONTAINER
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          "https://images.pexels.com/photos/1599005/pexels-photo-1599005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+                      fit: BoxFit
+                          .cover, // PREENCHER A IMAGEM NO CONTAINER INTEIRO
+                    ),
+                  ),
                   height: 150,
                 )
               ],
